@@ -1,10 +1,14 @@
 basic.forever(function () {
-    maqueen.MotorRun(maqueen.aMotors.M1, maqueen.Dir.CW, 50)
-    maqueen.MotorRun(maqueen.aMotors.M2, maqueen.Dir.CW, 50)
-    maqueen.motorStopAll()
-    basic.pause(2000)
-    maqueen.MotorRun(maqueen.aMotors.M1, maqueen.Dir.CCW, 50)
-    maqueen.MotorRun(maqueen.aMotors.M2, maqueen.Dir.CCW, 50)
-    maqueen.motorStopAll()
-    basic.pause(2000)
+    for (let index = 0; index <= 10; index++) {
+        basic.showNumber(index)
+        maqueen.MotorRun(maqueen.aMotors.M1, maqueen.Dir.CW, 255)
+        maqueen.MotorRun(maqueen.aMotors.M2, maqueen.Dir.CW, 255)
+        index += 1
+    }
+    for (let index = 0; index <= 10; index++) {
+        basic.showNumber(index)
+        maqueen.MotorRun(maqueen.aMotors.M1, maqueen.Dir.CCW, 255)
+        maqueen.MotorRun(maqueen.aMotors.M2, maqueen.Dir.CCW, 255)
+        index += 1
+    }
 })
